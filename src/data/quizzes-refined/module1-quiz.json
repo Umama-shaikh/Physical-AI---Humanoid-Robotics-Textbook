@@ -1,0 +1,150 @@
+{
+  "id": "module1",
+  "title": "Module 1 Quiz - ROS 2 Fundamentals",
+  "questions": [
+    {
+      "id": "q1",
+      "text": "What does ROS 2 stand for?",
+      "options": [
+        "Robot Operating System 2",
+        "Robotic Operations Suite 2",
+        "Robot Operating Software 2",
+        "Robotic Operating System 2"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Explanation for question 1"
+    },
+    {
+      "id": "q2",
+      "text": "Which communication pattern uses a publish/subscribe model in ROS 2?",
+      "options": [
+        "Services",
+        "Actions",
+        "Topics",
+        "Parameters"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Explanation for question 2"
+    },
+    {
+      "id": "q3",
+      "text": "What is the primary programming language used for the ROS 2 client library rclpy?",
+      "options": [
+        "C++",
+        "Python",
+        "Java",
+        "JavaScript"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Explanation for question 3"
+    },
+    {
+      "id": "q4",
+      "text": "In URDF, what does the 'link' element represent?",
+      "options": [
+        "A connection between two parts",
+        "A rigid part of the robot",
+        "A sensor on the robot",
+        "A joint in the robot"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Explanation for question 4"
+    },
+    {
+      "id": "q5",
+      "text": "Which of the following is NOT a valid joint type in URDF?",
+      "options": [
+        "revolute",
+        "continuous",
+        "prismatic",
+        "oscillating"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Explanation for question 5"
+    },
+    {
+      "id": "q6",
+      "text": "What does DDS stand for in the context of ROS 2?",
+      "options": [
+        "Distributed Data System",
+        "Data Distribution Service",
+        "Dynamic Data Sharing",
+        "Distributed Development System"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Explanation for question 6"
+    },
+    {
+      "id": "q7",
+      "text": "In rclpy, which method is used to create a publisher?",
+      "options": [
+        "create_publisher()",
+        "make_publisher()",
+        "init_publisher()",
+        "new_publisher()"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Explanation for question 7"
+    },
+    {
+      "id": "q8",
+      "text": "What is the purpose of the robot_state_publisher node?",
+      "options": [
+        "To publish sensor data from the robot",
+        "To publish joint states to the TF system",
+        "To control robot movement",
+        "To manage robot parameters"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Explanation for question 8"
+    },
+    {
+      "id": "q9",
+      "text": "Which command is used to run a ROS 2 node?",
+      "options": [
+        "ros2 run <package_name> <node_name>",
+        "ros2 execute <package_name> <node_name>",
+        "ros2 start <package_name> <node_name>",
+        "ros2 launch <package_name> <node_name>"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Explanation for question 9"
+    },
+    {
+      "id": "q10",
+      "text": "In a URDF file, what does the 'inertial' element define?",
+      "options": [
+        "How the link looks visually",
+        "How the link collides with other objects",
+        "The physical properties for physics simulation",
+        "The joint properties of the link"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Explanation for question 10"
+    },
+    {
+      "id": "q11",
+      "text": "What is the default middleware used by ROS 2 for communication?",
+      "options": [
+        "TCP/IP",
+        "ZeroMQ",
+        "DDS (Data Distribution Service)",
+        "MQTT"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Explanation for question 11"
+    },
+    {
+      "id": "q12",
+      "text": "Which rclpy function is used to initialize the ROS 2 client library?",
+      "options": [
+        "rclpy.start()",
+        "rclpy.init()",
+        "rclpy.begin()",
+        "rclpy.setup()"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Explanation for question 12"
+    }
+  ]
+}

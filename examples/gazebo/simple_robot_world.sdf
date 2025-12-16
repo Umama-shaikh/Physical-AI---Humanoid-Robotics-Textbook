@@ -1,0 +1,235 @@
+<?xml version="1.0" ?>
+<sdf version="1.7">
+  <world name="simple_robot_world">
+    <!-- Physics Engine Configuration -->
+    <physics type="ode">
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+      <gravity>0 0 -9.8</gravity>
+      <ode>
+        <solver>
+          <type>quick</type>
+          <iters>10</iters>
+          <sor>1.3</sor>
+        </solver>
+        <constraints>
+          <cfm>0.0</cfm>
+          <erp>0.2</erp>
+          <contact_max_correcting_vel>100</contact_max_correcting_vel>
+          <contact_surface_layer>0.001</contact_surface_layer>
+        </constraints>
+      </ode>
+    </physics>
+
+    <!-- Lighting -->
+    <light name="sun" type="directional">
+      <cast_shadows>true</cast_shadows>
+      <pose>0 0 10 0 0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.3 0.0 -1.0</direction>
+    </light>
+
+    <!-- Ground Plane -->
+    <model name="ground_plane">
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>100 100</size>
+            </plane>
+          </geometry>
+          <material>
+            <ambient>0.3 0.3 0.3 1</ambient>
+            <diffuse>0.7 0.7 0.7 1</diffuse>
+            <specular>0.0 0.0 0.0 1</specular>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Room with walls -->
+    <model name="room">
+      <static>true</static>
+      <!-- North wall -->
+      <link name="wall_north">
+        <pose>0 5 1.5 0 0 0</pose>
+        <collision name="collision_north">
+          <geometry><box><size>10 0.2 3</size></box></geometry>
+        </collision>
+        <visual name="visual_north">
+          <geometry><box><size>10 0.2 3</size></box></geometry>
+          <material>
+            <ambient>0.5 0.5 0.5 1</ambient>
+            <diffuse>0.8 0.8 0.8 1</diffuse>
+          </material>
+        </visual>
+      </link>
+      <!-- South wall -->
+      <link name="wall_south">
+        <pose>0 -5 1.5 0 0 0</pose>
+        <collision name="collision_south">
+          <geometry><box><size>10 0.2 3</size></box></geometry>
+        </collision>
+        <visual name="visual_south">
+          <geometry><box><size>10 0.2 3</size></box></geometry>
+          <material>
+            <ambient>0.5 0.5 0.5 1</ambient>
+            <diffuse>0.8 0.8 0.8 1</diffuse>
+          </material>
+        </visual>
+      </link>
+      <!-- East wall -->
+      <link name="wall_east">
+        <pose>5 0 1.5 0 0 0</pose>
+        <collision name="collision_east">
+          <geometry><box><size>0.2 10 3</size></box></geometry>
+        </collision>
+        <visual name="visual_east">
+          <geometry><box><size>0.2 10 3</size></box></geometry>
+          <material>
+            <ambient>0.5 0.5 0.5 1</ambient>
+            <diffuse>0.8 0.8 0.8 1</diffuse>
+          </material>
+        </visual>
+      </link>
+      <!-- West wall -->
+      <link name="wall_west">
+        <pose>-5 0 1.5 0 0 0</pose>
+        <collision name="collision_west">
+          <geometry><box><size>0.2 10 3</size></box></geometry>
+        </collision>
+        <visual name="visual_west">
+          <geometry><box><size>0.2 10 3</size></box></geometry>
+          <material>
+            <ambient>0.5 0.5 0.5 1</ambient>
+            <diffuse>0.8 0.8 0.8 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Obstacles -->
+    <model name="obstacle1">
+      <pose>-2 2 0.5 0 0 0</pose>
+      <link name="link">
+        <inertial>
+          <mass>5.0</mass>
+          <inertia>
+            <ixx>0.416</ixx> <ixy>0</ixy> <ixz>0</ixz>
+            <iyy>0.416</iyy> <iyz>0</iyz> <izz>0.833</izz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry><box><size>1 1 1</size></box></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><box><size>1 1 1</size></box></geometry>
+          <material>
+            <ambient>0.8 0.2 0.2 1</ambient>
+            <diffuse>1.0 0.3 0.3 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="obstacle2">
+      <pose>3 -3 0.3 0 0 0</pose>
+      <link name="link">
+        <inertial>
+          <mass>3.0</mass>
+          <inertia>
+            <ixx>0.1</ixx> <ixy>0</ixy> <ixz>0</ixz>
+            <iyy>0.1</iyy> <iyz>0</iyz> <izz>0.1</izz>
+          </inertia>
+        </inertial>
+        <collision name="collision">
+          <geometry><cylinder><radius>0.5</radius><length>0.6</length></cylinder></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><cylinder><radius>0.5</radius><length>0.6</length></cylinder></geometry>
+          <material>
+            <ambient>0.2 0.2 0.8 1</ambient>
+            <diffuse>0.3 0.3 1.0 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Example robot spawn location -->
+    <model name="example_robot" type="model" placeholder="true">
+      <!-- This is a placeholder for where a robot would be spawned -->
+      <!-- Actual robot models would be loaded separately and spawned via ROS -->
+      <pose>0 0 0.5 0 0 0</pose>
+    </model>
+
+    <!-- Optional: Add some landmarks for navigation -->
+    <model name="landmark_red">
+      <pose>-4 4 0.5 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry><box><size>0.2 0.2 1</size></box></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><box><size>0.2 0.2 1</size></box></geometry>
+          <material>
+            <ambient>0.8 0.2 0.2 1</ambient>
+            <diffuse>1.0 0.3 0.3 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <model name="landmark_green">
+      <pose>4 -4 0.5 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry><box><size>0.2 0.2 1</size></box></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><box><size>0.2 0.2 1</size></box></geometry>
+          <material>
+            <ambient>0.2 0.8 0.2 1</ambient>
+            <diffuse>0.3 1.0 0.3 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Optional: Add a charging station -->
+    <model name="charging_station">
+      <pose>4 4 0 0 0 0</pose>
+      <static>true</static>
+      <link name="link">
+        <collision name="collision">
+          <geometry><box><size>2 1 0.1</size></box></geometry>
+        </collision>
+        <visual name="visual">
+          <geometry><box><size>2 1 0.1</size></box></geometry>
+          <material>
+            <ambient>0.5 0.5 0.1 1</ambient>
+            <diffuse>0.8 0.8 0.2 1</diffuse>
+          </material>
+        </visual>
+      </link>
+    </model>
+
+  </world>
+</sdf>

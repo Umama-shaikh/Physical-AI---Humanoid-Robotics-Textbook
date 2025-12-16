@@ -1,0 +1,127 @@
+{
+  "id": "module3",
+  "title": "Module 3 Quiz: Isaac Sim, Isaac ROS, VSLAM, and Navigation for Humanoids",
+  "questions": [
+    {
+      "id": "q1",
+      "text": "What is the primary purpose of Isaac Sim in robotics development?",
+      "options": [
+        "Real-time control of physical robots",
+        "High-fidelity physics simulation and photorealistic rendering for robotics",
+        "Speech recognition for human-robot interaction",
+        "Low-level motor control"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Explanation for question 1"
+    },
+    {
+      "id": "q2",
+      "text": "Which physics engine does Isaac Sim primarily use for simulation?",
+      "options": [
+        "Bullet Physics",
+        "PhysX",
+        "Havok",
+        "ODE (Open Dynamics Engine)"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Explanation for question 2"
+    },
+    {
+      "id": "q3",
+      "text": "What does VSLAM stand for in the context of robotics?",
+      "options": [
+        "Visual Simultaneous Localization and Mapping",
+        "Virtual Sensor Localization and Mapping",
+        "Vision-based System for Localization and Mapping",
+        "Variable Sensor Localization and Mapping"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Explanation for question 3"
+    },
+    {
+      "id": "q4",
+      "text": "In Isaac ROS, which sensor processing acceleration is specifically designed for stereo vision?",
+      "options": [
+        "Stereo DNN",
+        "Stereo Image Proc",
+        "Stereo Disparity",
+        "Stereo Visual Odometry"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Explanation for question 4"
+    },
+    {
+      "id": "q5",
+      "text": "What is the main advantage of using synthetic data generation in Isaac Sim?",
+      "options": [
+        "Lower computational requirements",
+        "Perfectly labeled training data for AI models",
+        "Direct transfer to real-world applications without domain adaptation",
+        "Real-time performance in all scenarios"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Explanation for question 5"
+    },
+    {
+      "id": "q6",
+      "text": "Which coordinate system does Isaac Sim use by default?",
+      "options": [
+        "Right-handed system (X-forward, Y-left, Z-up)",
+        "Left-handed system (X-right, Y-up, Z-forward)",
+        "Right-handed system (X-right, Y-forward, Z-up)",
+        "Left-handed system (X-right, Y-up, Z-forward)"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Explanation for question 6"
+    },
+    {
+      "id": "q7",
+      "text": "What is the Zero Moment Point (ZMP) in humanoid robotics?",
+      "options": [
+        "in humanoid robotics?",
+        "The point where the robot's center of mass is located",
+        "The point where the sum of all moments caused by gravity and inertia forces equals zero",
+        "The point where the robot's feet touch the ground",
+        "The point where the robot's vision system is focused"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Explanation for question 7"
+    },
+    {
+      "id": "q8",
+      "text": "Which of the following is NOT a key feature of Isaac ROS?",
+      "options": [
+        "GPU-accelerated computer vision",
+        "Hardware abstraction for sensors",
+        "Built-in path planning algorithms",
+        "Real-time perception pipelines"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Explanation for question 8"
+    },
+    {
+      "id": "q9",
+      "text": "In Nav2 for humanoids, what is the primary challenge that differentiates it from wheeled robot navigation?",
+      "options": [
+        "Higher computational requirements",
+        "The need to maintain dynamic balance during locomotion",
+        "More complex sensor configurations",
+        "Larger environmental maps"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Explanation for question 9"
+    },
+    {
+      "id": "q10",
+      "text": "What is the main purpose of the Behavior Tree in Nav2?",
+      "options": [
+        "To store environmental maps",
+        "To define the decision-making logic for navigation",
+        "To manage robot's joint positions",
+        "To store sensor calibration data"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Explanation for question 10"
+    }
+  ]
+}

@@ -1,0 +1,242 @@
+# Sensor Configuration for Robot Simulation
+# This file contains configurations for various sensors used in the simulation
+
+---
+# LiDAR Sensor Configuration
+lidar_config:
+  name: "front_lidar"
+  type: "ray"
+  topic: "/scan"
+  frame_id: "lidar_link"
+
+  # Update rate in Hz
+  update_rate: 10
+
+  # Ray scan parameters
+  ray:
+    horizontal:
+      samples: 720        # Number of rays in horizontal scan
+      resolution: 1       # Resolution of rays
+      min_angle: -1.570796  # -90 degrees in radians
+      max_angle: 1.570796   # 90 degrees in radians
+    vertical:
+      samples: 1          # For 2D LiDAR, set to 1
+      resolution: 1
+      min_angle: 0
+      max_angle: 0
+    range:
+      min: 0.1            # Minimum detectable range (m)
+      max: 30.0           # Maximum detectable range (m)
+      resolution: 0.01    # Range resolution (m)
+
+  # Noise parameters
+  noise:
+    type: "gaussian"
+    mean: 0.0
+    stddev: 0.01
+
+# Depth Camera Configuration
+depth_camera_config:
+  name: "front_camera"
+  type: "depth"
+  color_topic: "/camera/color/image_raw"
+  depth_topic: "/camera/depth/image_raw"
+  camera_info_topic: "/camera/color/camera_info"
+  frame_id: "camera_link"
+
+  # Update rate in Hz
+  update_rate: 30
+
+  # Camera parameters
+  camera:
+    horizontal_fov: 1.047    # 60 degrees in radians
+    image:
+      width: 640
+      height: 480
+      format: "R8G8B8"
+    clip:
+      near: 0.1              # Near clipping plane (m)
+      far: 10.0              # Far clipping plane (m)
+
+  # Noise parameters
+  noise:
+    type: "gaussian"
+    mean: 0.0
+    stddev: 0.007
+
+# IMU Sensor Configuration
+imu_config:
+  name: "imu_sensor"
+  type: "imu"
+  topic: "/imu"
+  frame_id: "imu_link"
+
+  # Update rate in Hz
+  update_rate: 100
+
+  # IMU parameters
+  imu:
+    # Gyroscope noise parameters
+    angular_velocity:
+      x:
+        noise:
+          type: "gaussian"
+          mean: 0.0
+          stddev: 2e-4
+          bias_mean: 0.0
+          bias_stddev: 0.001
+      y:
+        noise:
+          type: "gaussian"
+          mean: 0.0
+          stddev: 2e-4
+          bias_mean: 0.0
+          bias_stddev: 0.001
+      z:
+        noise:
+          type: "gaussian"
+          mean: 0.0
+          stddev: 2e-4
+          bias_mean: 0.0
+          bias_stddev: 0.001
+
+    # Accelerometer noise parameters
+    linear_acceleration:
+      x:
+        noise:
+          type: "gaussian"
+          mean: 0.0
+          stddev: 1.7e-2
+          bias_mean: 0.0
+          bias_stddev: 0.01
+      y:
+        noise:
+          type: "gaussian"
+          mean: 0.0
+          stddev: 1.7e-2
+          bias_mean: 0.0
+          bias_stddev: 0.01
+      z:
+        noise:
+          type: "gaussian"
+          mean: 0.0
+          stddev: 1.7e-2
+          bias_mean: 0.0
+          bias_stddev: 0.01
+
+# GPS Sensor Configuration (if needed)
+gps_config:
+  name: "gps_sensor"
+  type: "navsat"
+  topic: "/gps/fix"
+  frame_id: "gps_link"
+
+  # Update rate in Hz
+  update_rate: 1
+
+  # Noise parameters
+  noise:
+    type: "gaussian"
+    position_stddev: 2.0   # Position accuracy in meters
+    velocity_stddev: 0.1   # Velocity accuracy in m/s
+
+# Wheel Odometry Configuration
+wheel_odom_config:
+  name: "wheel_odometry"
+  type: "odometry"
+  topic: "/odom"
+  frame_id: "odom"
+  child_frame_id: "base_link"
+
+  # Update rate in Hz
+  update_rate: 50
+
+  # Noise parameters
+  noise:
+    type: "gaussian"
+    position_stddev: 0.01  # Position noise in meters
+    orientation_stddev: 0.01 # Orientation noise in radians
+    linear_velocity_stddev: 0.05  # Linear velocity noise
+    angular_velocity_stddev: 0.01 # Angular velocity noise
+
+# Sensor Fusion Configuration
+sensor_fusion_config:
+  # Parameters for combining sensor data
+  fusion_method: "ekf"  # Extended Kalman Filter
+
+  # Sensor weights for fusion
+  sensor_weights:
+    lidar: 0.3
+    imu: 0.4
+    wheel_odom: 0.2
+    gps: 0.1
+
+  # Fusion update rates
+  position_update_rate: 50
+  orientation_update_rate: 100
+
+# Multi-Sensor Array Configuration
+sensor_array_config:
+  # Configuration for robots with multiple instances of the same sensor type
+  front_sensors:
+    lidar:
+      position: [0.5, 0.0, 0.3]  # x, y, z position relative to base_link
+      rotation: [0.0, 0.0, 0.0]  # roll, pitch, yaw in radians
+    camera:
+      position: [0.5, 0.0, 0.4]
+      rotation: [0.0, 0.0, 0.0]
+    imu:
+      position: [0.0, 0.0, 0.5]
+      rotation: [0.0, 0.0, 0.0]
+
+  rear_sensors:
+    lidar:
+      position: [-0.3, 0.0, 0.3]
+      rotation: [0.0, 0.0, 3.14159]  # 180 degrees for rear facing
+    camera:
+      position: [-0.3, 0.0, 0.4]
+      rotation: [0.0, 0.0, 3.14159]
+
+# Performance Optimization Settings
+performance_config:
+  # Settings to optimize simulation performance
+  max_update_rate: 1000          # Maximum update rate for all sensors
+  sensor_processing_threads: 4   # Number of threads for sensor processing
+  data_compression: true         # Enable data compression for network
+  update_rate_reduction_factor: 0.8  # Reduce update rates by 20% if needed for performance
+
+# Safety and Validation Settings
+safety_config:
+  # Parameters to ensure safe operation in simulation
+  max_sensor_range: 100.0        # Maximum allowed sensor range
+  min_sensor_range: 0.01         # Minimum allowed sensor range
+  sensor_timeout: 5.0            # Timeout in seconds for sensor data
+  validation_enabled: true       # Enable sensor data validation
+  outlier_rejection: true        # Enable outlier rejection for sensor data
+
+# Calibration Settings
+calibration_config:
+  # Default calibration parameters
+  camera_calibration:
+    # Camera intrinsic parameters
+    fx: 525.0    # Focal length x
+    fy: 525.0    # Focal length y
+    cx: 319.5    # Principal point x
+    cy: 239.5    # Principal point y
+    distortion_coeffs: [0.0, 0.0, 0.0, 0.0, 0.0]  # k1, k2, p1, p2, k3
+
+  lidar_calibration:
+    # LiDAR calibration parameters
+    angular_resolution: 0.0087266  # 0.5 degrees in radians
+    distance_resolution: 0.01       # 1 cm resolution
+
+# Debug Configuration
+debug_config:
+  # Settings for debugging sensor data
+  enable_sensor_diagnostics: true
+  log_sensor_data: false
+  sensor_visualization: true
+  publish_raw_data: true
+  publish_filtered_data: true
+
+...

@@ -1,0 +1,126 @@
+{
+  "id": "module4",
+  "title": "Module 4 Quiz: Voice-to-Action and LLM Cognitive Planning",
+  "questions": [
+    {
+      "id": "q1",
+      "text": "What is the primary function of OpenAI's Whisper model in robotics applications?",
+      "options": [
+        "Motion planning for robot arms",
+        "Speech recognition and transcription",
+        "Computer vision processing",
+        "Path planning for navigation"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Explanation for question 1"
+    },
+    {
+      "id": "q2",
+      "text": "Which of the following is NOT a common Whisper model size?",
+      "options": [
+        "Tiny",
+        "Base",
+        "Large",
+        "Mega"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Explanation for question 2"
+    },
+    {
+      "id": "q3",
+      "text": "In LLM-based cognitive planning for robots, what does \"zero-shot learning\" refer to?",
+      "options": [
+        "Learning without any prior training",
+        "Performing tasks without examples in the prompt",
+        "Running the model without any parameters",
+        "Operating without any sensors"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Explanation for question 3"
+    },
+    {
+      "id": "q4",
+      "text": "What is the main challenge of integrating LLMs with real-time robotic systems?",
+      "options": [
+        "High computational requirements",
+        "Latency constraints for real-time response",
+        "Limited vocabulary of LLMs",
+        "Inability to process sensor data"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Explanation for question 4"
+    },
+    {
+      "id": "q5",
+      "text": "Which safety consideration is most critical when using LLMs for robot control?",
+      "options": [
+        "Model accuracy",
+        "Response time",
+        "Potential for unsafe action generation",
+        "Data privacy"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Explanation for question 5"
+    },
+    {
+      "id": "q6",
+      "text": "What is the typical sampling rate for audio processing in voice-controlled robotics?",
+      "options": [
+        "8000 Hz",
+        "11025 Hz",
+        "16000 Hz",
+        "44100 Hz"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Explanation for question 6"
+    },
+    {
+      "id": "q7",
+      "text": "In cognitive robotics, what is the purpose of a \"belief state\"?",
+      "options": [
+        "The robot's confidence in its sensors",
+        "A representation of the robot's knowledge about the world",
+        "The robot's emotional state",
+        "The robot's battery level"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Explanation for question 7"
+    },
+    {
+      "id": "q8",
+      "text": "Which of the following is a key component of uncertainty-aware planning?",
+      "options": [
+        "Deterministic action sequences",
+        "Probabilistic reasoning about outcomes",
+        "Fixed execution timelines",
+        "Open-loop control systems"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Explanation for question 8"
+    },
+    {
+      "id": "q9",
+      "text": "What is the main advantage of using transformer-based models like Whisper for speech recognition in robotics?",
+      "options": [
+        "Lower computational requirements",
+        "Better handling of context and long-term dependencies",
+        "Simpler implementation",
+        "Real-time processing capabilities"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Explanation for question 9"
+    },
+    {
+      "id": "q10",
+      "text": "In voice command processing, what is the purpose of a wake word detection system?",
+      "options": [
+        "To improve speech recognition accuracy",
+        "To activate the voice processing system when needed",
+        "To translate speech to text",
+        "To filter out background noise"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Explanation for question 10"
+    }
+  ]
+}

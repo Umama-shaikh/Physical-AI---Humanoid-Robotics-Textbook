@@ -1,0 +1,49 @@
+{
+  "moduleId": "module4",
+  "title": "Knowledge Check",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "text": "What does VLA stand for in the context of robotics?",
+      "options": [
+        "Visual Language Action",
+        "Voice Language Automation",
+        "Vision-Language-Action",
+        "Variable Learning Algorithm"
+      ],
+      "correctAnswer": 2,
+      "explanation": "VLA (Vision-Language-Action) refers to systems that integrate visual perception, language understanding, and action execution in robotics.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "text": "How do LLMs (Large Language Models) contribute to robotic systems?",
+      "options": [
+        "They directly control robot hardware",
+        "They provide high-level task planning and natural language understanding",
+        "They replace computer vision systems",
+        "They manage robot power systems"
+      ],
+      "correctAnswer": 1,
+      "explanation": "LLMs provide high-level cognitive planning and natural language understanding, allowing robots to interpret complex commands and plan sequences of actions.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "text": "What is a key challenge in Vision-Language-Action systems?",
+      "options": [
+        "Generating enough power for robot operation",
+        "Coordinating between perception, language understanding, and action execution",
+        "Creating physical robot components",
+        "Designing robot user interfaces"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The main challenge in VLA systems is effectively coordinating between visual perception, language understanding, and action execution to achieve coherent robot behavior.",
+      "difficulty": "medium"
+    }
+  ],
+  "instructions": "Select the best answer for each question. You can review your answers after submission."
+}

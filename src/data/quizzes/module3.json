@@ -1,0 +1,49 @@
+{
+  "moduleId": "module3",
+  "title": "Knowledge Check",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "text": "What does VSLAM stand for in robotics?",
+      "options": [
+        "Visual Sensor Localization and Mapping",
+        "Vision-Sensor Localization and Mapping",
+        "Visual Simultaneous Localization and Mapping",
+        "Video Sensor Landmark Acquisition Method"
+      ],
+      "correctAnswer": 2,
+      "explanation": "VSLAM (Visual Simultaneous Localization and Mapping) is a technology that uses visual sensors to simultaneously map an environment and determine the robot's position within it.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "text": "Which NVIDIA Isaac component is primarily used for visual perception?",
+      "options": [
+        "Isaac Navigation",
+        "Isaac Sim",
+        "Isaac ROS",
+        "Isaac Manipulator"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Isaac ROS provides visual perception capabilities, including VSLAM, object detection, and other computer vision functions for robotics applications.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "text": "What is the main purpose of Simultaneous Localization and Mapping (SLAM)?",
+      "options": [
+        "To create 3D models of objects",
+        "To enable a robot to navigate in an unknown environment while building a map",
+        "To improve robot communication capabilities",
+        "To optimize robot path planning algorithms"
+      ],
+      "correctAnswer": 1,
+      "explanation": "SLAM allows a robot to construct or update a map of an unknown environment while simultaneously keeping track of its location within that map.",
+      "difficulty": "medium"
+    }
+  ],
+  "instructions": "Select the best answer for each question. You can review your answers after submission."
+}

@@ -1,0 +1,179 @@
+# API Contract: Robot Control Interface
+# Used in examples throughout the Physical AI & Humanoid Robotics book
+
+openapi: 3.0.0
+info:
+  title: Robot Control API
+  description: API for controlling humanoid robots in simulation and real environments
+  version: 1.0.0
+  contact:
+    name: Physical AI & Humanoid Robotics Book Team
+    email: book@example.com
+
+paths:
+  /robot/move:
+    post:
+      summary: Send movement command to robot
+      description: Send a movement command to control the robot's position or velocity
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/MoveCommand'
+      responses:
+        '200':
+          description: Movement command accepted
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CommandResponse'
+        '400':
+          description: Invalid command format
+        '500':
+          description: Robot communication error
+
+  /robot/sensors:
+    get:
+      summary: Get sensor data
+      description: Retrieve current sensor readings from the robot
+      responses:
+        '200':
+          description: Current sensor data
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SensorData'
+        '500':
+          description: Sensor communication error
+
+  /robot/voice-command:
+    post:
+      summary: Send voice command
+      description: Send a voice command that will be processed by the VLA system
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/VoiceCommand'
+      responses:
+        '200':
+          description: Voice command processed successfully
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CommandResponse'
+        '400':
+          description: Invalid voice command
+        '500':
+          description: Voice processing error
+
+components:
+  schemas:
+    MoveCommand:
+      type: object
+      properties:
+        x:
+          type: number
+          description: X coordinate or velocity
+          example: 1.5
+        y:
+          type: number
+          description: Y coordinate or velocity
+          example: 2.0
+        z:
+          type: number
+          description: Z coordinate or velocity
+          example: 0.0
+        rotation:
+          type: number
+          description: Rotation angle in radians
+          example: 1.57
+        command_type:
+          type: string
+          enum: [position, velocity]
+          description: Whether to move to position or move at velocity
+          example: "position"
+
+    SensorData:
+      type: object
+      properties:
+        lidar:
+          type: array
+          items:
+            type: number
+          description: LIDAR distance readings
+        imu:
+          $ref: '#/components/schemas/IMUData'
+        camera:
+          type: string
+          description: Base64 encoded image data
+        timestamp:
+          type: string
+          format: date-time
+          description: Time when data was captured
+
+    IMUData:
+      type: object
+      properties:
+        orientation:
+          type: object
+          properties:
+            x:
+              type: number
+            y:
+              type: number
+            z:
+              type: number
+            w:
+              type: number
+        angular_velocity:
+          type: object
+          properties:
+            x:
+              type: number
+            y:
+              type: number
+            z:
+              type: number
+        linear_acceleration:
+          type: object
+          properties:
+            x:
+              type: number
+            y:
+              type: number
+            z:
+              type: number
+
+    VoiceCommand:
+      type: object
+      properties:
+        audio_data:
+          type: string
+          description: Base64 encoded audio data
+        text:
+          type: string
+          description: Optional pre-processed text
+        language:
+          type: string
+          description: Language code (e.g., en-US)
+          default: "en-US"
+
+    CommandResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: Whether the command was successful
+        message:
+          type: string
+          description: Human-readable response message
+        command_id:
+          type: string
+          description: Unique identifier for the command
+        timestamp:
+          type: string
+          format: date-time
+          description: Time when command was processed

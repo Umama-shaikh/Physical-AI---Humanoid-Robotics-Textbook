@@ -1,0 +1,246 @@
+{
+  "id": "module2",
+  "title": "Module 2 Quiz - Simulation Environments",
+  "questions": [
+    {
+      "id": "q1",
+      "text": "What does Gazebo use as its default physics engine?",
+      "options": [
+        "Bullet",
+        "ODE (Open Dynamics Engine)",
+        "PhysX",
+        "Havok"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Explanation for question 1"
+    },
+    {
+      "id": "q2",
+      "text": "In SDF (Simulation Description Format), what element defines the physics properties of a world?",
+      "options": [
+        "`<physics>`",
+        "`<engine>`",
+        "`<simulation>`",
+        "`<properties>`"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Explanation for question 2"
+    },
+    {
+      "id": "q3",
+      "text": "Which of the following is NOT a valid joint type in URDF?",
+      "options": [
+        "revolute",
+        "prismatic",
+        "continuous",
+        "oscillating"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Explanation for question 3"
+    },
+    {
+      "id": "q4",
+      "text": "What is the primary purpose of the robot_state_publisher in ROS 2?",
+      "options": [
+        "To publish sensor data from the robot",
+        "To publish joint states to the TF system",
+        "To control robot movement",
+        "To manage robot parameters"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Explanation for question 4"
+    },
+    {
+      "id": "q5",
+      "text": "In Gazebo, what sensor type would you use to simulate a LiDAR?",
+      "options": [
+        "camera",
+        "depth",
+        "ray",
+        "gpu_ray"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Explanation for question 5"
+    },
+    {
+      "id": "q6",
+      "text": "What is the coordinate system convention used by ROS?",
+      "options": [
+        "X-right, Y-up, Z-forward (left-handed)",
+        "X-forward, Y-left, Z-up (right-handed)",
+        "X-right, Y-forward, Z-up (left-handed)",
+        "X-forward, Y-right, Z-down (right-handed)"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Explanation for question 6"
+    },
+    {
+      "id": "q7",
+      "text": "Which Unity coordinate system axis represents \"up\" in the default setup?",
+      "options": [
+        "X-axis",
+        "Y-axis",
+        "Z-axis",
+        "None of the above"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Explanation for question 7"
+    },
+    {
+      "id": "q8",
+      "text": "What does the \"DDS\" in ROS 2 stand for?",
+      "options": [
+        "Distributed Data System",
+        "Data Distribution Service",
+        "Dynamic Data Sharing",
+        "Distributed Development System"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Explanation for question 8"
+    },
+    {
+      "id": "q9",
+      "text": "In a Gazebo world file, which element defines a light source?",
+      "options": [
+        "`<lighting>`",
+        "`<source>`",
+        "`<light>`",
+        "`<illumination>`"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Explanation for question 9"
+    },
+    {
+      "id": "q10",
+      "text": "What is the purpose of the URDF \"inertial\" element?",
+      "options": [
+        "To define how the link looks visually",
+        "To define collision properties",
+        "To define physical properties for physics simulation",
+        "To define joint properties"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Explanation for question 10"
+    },
+    {
+      "id": "q11",
+      "text": "Which ROS 2 message type is typically used for LiDAR data?",
+      "options": [
+        "sensor_msgs/Image",
+        "sensor_msgs/LaserScan",
+        "sensor_msgs/PointCloud2",
+        "geometry_msgs/Point"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Explanation for question 11"
+    },
+    {
+      "id": "q12",
+      "text": "In Unity, what system is used to create user interfaces?",
+      "options": [
+        "UI System",
+        "Canvas System",
+        "Both A and B",
+        "Graphics System"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Explanation for question 12"
+    },
+    {
+      "id": "q13",
+      "text": "What is the main advantage of using simulation in robotics development?",
+      "options": [
+        "It's always faster than real hardware",
+        "It allows safe testing without risk to hardware",
+        "It perfectly replicates real-world conditions",
+        "It requires no computational resources"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Explanation for question 13"
+    },
+    {
+      "id": "q14",
+      "text": "Which of these is a common sensor configuration parameter for noise modeling?",
+      "options": [
+        "Standard deviation",
+        "Bias",
+        "Drift",
+        "All of the above"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Explanation for question 14"
+    },
+    {
+      "id": "q15",
+      "text": "In a behavior tree for robot control, what does a \"sequence\" node do?",
+      "options": [
+        "Executes all children in parallel",
+        "Executes children until one fails",
+        "Executes children until one succeeds",
+        "Randomly selects a child to execute"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Explanation for question 15"
+    },
+    {
+      "id": "q16",
+      "text": "What is the primary purpose of the IMU sensor in robotics?",
+      "options": [
+        "To capture visual information",
+        "To measure position and orientation",
+        "To measure angular velocity and linear acceleration",
+        "To detect obstacles"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Explanation for question 16"
+    },
+    {
+      "id": "q17",
+      "text": "In Gazebo, what does the \"update_rate\" parameter specify for a sensor?",
+      "options": [
+        "The maximum range of the sensor",
+        "How often the sensor publishes data (Hz)",
+        "The resolution of the sensor",
+        "The accuracy of the sensor"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Explanation for question 17"
+    },
+    {
+      "id": "q18",
+      "text": "Which Unity component is essential for creating interactive 3D objects?",
+      "options": [
+        "Rigidbody",
+        "Collider",
+        "Both A and B",
+        "MeshRenderer"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Explanation for question 18"
+    },
+    {
+      "id": "q19",
+      "text": "What does the \"URDF\" in robotics stand for?",
+      "options": [
+        "Universal Robot Data Format",
+        "Unified Robot Description Format",
+        "Universal Robot Description Format",
+        "Unified Robot Data Format"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Explanation for question 19"
+    },
+    {
+      "id": "q20",
+      "text": "In ROS 2, what command is used to visualize the TF tree?",
+      "options": [
+        "ros2 run tf2_tools view_frames",
+        "ros2 run rqt_tf_tree tf_tree",
+        "ros2 run rviz2 rviz2",
+        "Both A and B"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Explanation for question 20"
+    }
+  ]
+}

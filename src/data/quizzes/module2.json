@@ -1,0 +1,49 @@
+{
+  "moduleId": "module2",
+  "title": "Knowledge Check",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "text": "What is Gazebo primarily used for in robotics development?",
+      "options": [
+        "To write robot control algorithms",
+        "To simulate robots and their environments",
+        "To manage robot hardware components",
+        "To create user interfaces for robots"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Gazebo is a 3D simulation environment that allows developers to test robots and their algorithms in realistic virtual environments before deploying to real hardware.",
+      "difficulty": "easy"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "text": "Which of the following is NOT a typical sensor simulated in Gazebo?",
+      "options": [
+        "LIDAR",
+        "Camera",
+        "IMU (Inertial Measurement Unit)",
+        "Microphone"
+      ],
+      "correctAnswer": 3,
+      "explanation": "While Gazebo can simulate many types of sensors including LIDAR, cameras, and IMUs, microphone simulation is not typically implemented in Gazebo as audio simulation is complex and less commonly needed for robotics applications.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "text": "What advantage does simulation provide in robotics development?",
+      "options": [
+        "It completely replaces the need for real robots",
+        "It allows for safe testing and rapid iteration without hardware risks",
+        "It guarantees that algorithms will work on real robots",
+        "It reduces the need for any physical testing"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Simulation allows developers to test algorithms safely, iterate quickly, and avoid potential damage to expensive hardware during development. However, real-world testing is still necessary for final validation.",
+      "difficulty": "medium"
+    }
+  ],
+  "instructions": "Select the best answer for each question. You can review your answers after submission."
+}

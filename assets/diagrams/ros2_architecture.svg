@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="800"
+   height="600"
+   viewBox="0 0 800 600"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <title>ROS 2 Architecture Diagram</title>
+  <desc>Diagram showing the core components of ROS 2 architecture</desc>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="400" y="40" font-family="Arial" font-size="24" text-anchor="middle" fill="#000000">
+    ROS 2 Architecture
+  </text>
+
+  <!-- DDS Middleware -->
+  <rect x="200" y="100" width="400" height="80" fill="#e6f3ff" stroke="#0066cc" stroke-width="2" rx="10" ry="10"/>
+  <text x="400" y="145" font-family="Arial" font-size="18" text-anchor="middle" fill="#000000">
+    DDS (Data Distribution Service)
+  </text>
+
+  <!-- Nodes -->
+  <circle cx="150" cy="300" r="50" fill="#ccffcc" stroke="#009900" stroke-width="2"/>
+  <text x="150" y="305" font-family="Arial" font-size="14" text-anchor="middle" fill="#000000">
+    Node A
+  </text>
+
+  <circle cx="400" cy="300" r="50" fill="#ccffcc" stroke="#009900" stroke-width="2"/>
+  <text x="400" y="305" font-family="Arial" font-size="14" text-anchor="middle" fill="#000000">
+    Node B
+  </text>
+
+  <circle cx="650" cy="300" r="50" fill="#ccffcc" stroke="#009900" stroke-width="2"/>
+  <text x="650" y="305" font-family="Arial" font-size="14" text-anchor="middle" fill="#000000">
+    Node C
+  </text>
+
+  <!-- Topic Communication -->
+  <line x1="180" y1="260" x2="370" y2="260" stroke="#ff6600" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="275" y="250" font-family="Arial" font-size="12" text-anchor="middle" fill="#ff6600">
+    Topic: /chatter
+  </text>
+
+  <line x1="620" y1="260" x2="430" y2="260" stroke="#ff6600" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="525" y="240" font-family="Arial" font-size="12" text-anchor="middle" fill="#ff6600">
+    Topic: /cmd_vel
+  </text>
+
+  <!-- Service Communication -->
+  <line x1="180" y1="340" x2="370" y2="340" stroke="#9933ff" stroke-width="2" stroke-dasharray="5,5"/>
+  <text x="275" y="330" font-family="Arial" font-size="12" text-anchor="middle" fill="#9933ff">
+    Service: /add_two_ints
+  </text>
+
+  <!-- Arrow marker definition -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#ff6600" />
+    </marker>
+  </defs>
+
+  <!-- Legend -->
+  <rect x="50" y="450" width="200" height="120" fill="#f9f9f9" stroke="#cccccc" stroke-width="1"/>
+  <text x="150" y="470" font-family="Arial" font-size="14" text-anchor="middle" fill="#000000" font-weight="bold">
+    Legend
+  </text>
+  <rect x="60" y="485" width="15" height="15" fill="#ccffcc" stroke="#009900" stroke-width="1"/>
+  <text x="80" y="497" font-family="Arial" font-size="12" fill="#000000">ROS Node</text>
+  <line x1="60" y1="510" x2="75" y2="510" stroke="#ff6600" stroke-width="2"/>
+  <text x="80" y="512" font-family="Arial" font-size="12" fill="#000000">Topic (Pub/Sub)</text>
+  <line x1="60" y1="525" x2="75" y2="525" stroke="#9933ff" stroke-width="2" stroke-dasharray="5,5"/>
+  <text x="80" y="527" font-family="Arial" font-size="12" fill="#000000">Service</text>
+  <rect x="60" y="540" width="15" height="15" fill="#e6f3ff" stroke="#0066cc" stroke-width="1"/>
+  <text x="80" y="552" font-family="Arial" font-size="12" fill="#000000">DDS Middleware</text>
+
+</svg>

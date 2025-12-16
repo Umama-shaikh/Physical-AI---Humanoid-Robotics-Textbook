@@ -1,0 +1,49 @@
+{
+  "moduleId": "module1",
+  "title": "Knowledge Check",
+  "questions": [
+    {
+      "id": "q1",
+      "type": "multiple-choice",
+      "text": "What is the primary purpose of ROS 2 in robotics development?",
+      "options": [
+        "To provide a hardware platform for robots",
+        "To serve as a communication framework between robot components",
+        "To replace all existing robot software",
+        "To act as a robot simulation environment"
+      ],
+      "correctAnswer": 1,
+      "explanation": "ROS 2 (Robot Operating System 2) serves as a middleware framework that provides services such as hardware abstraction, device drivers, libraries, and message-passing between different robot components.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q2",
+      "type": "multiple-choice",
+      "text": "Which of the following is a key feature of ROS 2 compared to ROS 1?",
+      "options": [
+        "Python-only programming interface",
+        "Single-threaded execution model",
+        "DDS-based middleware for communication",
+        "Limited package management"
+      ],
+      "correctAnswer": 2,
+      "explanation": "ROS 2 uses DDS (Data Distribution Service) as its underlying middleware, providing better real-time performance, fault tolerance, and language independence compared to ROS 1's custom TCPROS/UDPROS implementations.",
+      "difficulty": "medium"
+    },
+    {
+      "id": "q3",
+      "type": "multiple-choice",
+      "text": "What does DDS stand for in the context of ROS 2?",
+      "options": [
+        "Distributed Data Service",
+        "Data Distribution System",
+        "Data Distribution Service",
+        "Distributed Development System"
+      ],
+      "correctAnswer": 2,
+      "explanation": "DDS (Data Distribution Service) is the underlying middleware technology that ROS 2 uses for communication between nodes, providing reliable message delivery and real-time performance.",
+      "difficulty": "easy"
+    }
+  ],
+  "instructions": "Select the best answer for each question. You can review your answers after submission."
+}
